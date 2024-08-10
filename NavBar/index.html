@@ -1,0 +1,74 @@
+<!-- https://bulma.io/documentation/ -->
+
+<!-- https://bulma.io/documentation/components/navbar/-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma Basics</title>
+    <!-- CSS FILE BULMA NEEDS IN ORDER TO WORK CORRECTLY -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAV BAR -->
+    <nav class="navbar / has-shadow / is-info">
+      <!-- logo / brand -->
+      <!-- https://bulma.io/documentation/components/navbar/#navbar-brand-->
+      <div class="navbar-brand">
+        <!-- LOGO -->
+        <a class="navbar-item">
+          <img
+            src="assets/LOGO.png"
+            alt="sit logo"
+            style="max-height: 70px"
+            class="py-2 px-2"
+          />
+        </a>
+        <!-- Burger icon (for mobile)-->
+        <a class="navbar-burger" id="burger" style="color: white">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <!-- https://bulma.io/documentation/components/navbar/#navbar-menu -->
+
+      <!-- https://bulma.io/documentation/components/navbar/#navbar-start-and-navbar-end -->
+
+      <!-- https://bulma.io/documentation/components/navbar/#navbar-item -->
+
+      <div class="navbar-menu" id="nav-links">
+        <!-- Navbar start and end -->
+        <div class="navbar-end">
+          <!-- navbar buttons -->
+          <a class="navbar-item / has-text-light">My Account</a>
+          <a class="navbar-item / has-text-light">Shopping Cart (0)</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar menu functionality -->
+    <script src="index.js"></script>
+
+    <!-- breadcrumbs -->
+    <!-- https://bulma.io/documentation/components/breadcrumb/-->
+
+    <!-- https://bulma.io/documentation/components/breadcrumb/#alternative-separators -->
+    <div class="section / pt-4 / pb-0">
+      <nav class="breadcrumb / has-bullet-separator">
+        <!-- buttons -->
+        <ul class="container">
+          <li class="is-active"><a>Figma</a></li>
+          <li><a class="has-text-grey">Explore</a></li>
+          <li><a class="has-text-grey">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
