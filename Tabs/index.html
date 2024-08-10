@@ -1,0 +1,183 @@
+<!-- https://bulma.io/documentation/ -->
+
+<!-- https://bulma.io/documentation/components/tabs/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma Basics</title>
+    <!-- CSS FILE BULMA NEEDS IN ORDER TO WORK CORRECTLY -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar / has-shadow / is-info">
+      <div class="navbar-brand">
+        <!-- LOGO -->
+        <a class="navbar-item">
+          <img
+            src="assets/LOGO.png"
+            alt="sit logo"
+            style="max-height: 70px"
+            class="py-2 px-2"
+          />
+        </a>
+        <!-- Burger icon (for mobile)-->
+        <a class="navbar-burger" id="burger" style="color: white">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <!-- navbar buttons -->
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+          <!-- navbar buttons -->
+          <a class="navbar-item / has-text-light">My Account</a>
+          <a class="navbar-item / has-text-light">Shopping Cart (0)</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar menu functionality -->
+    <script src="index.js"></script>
+
+    <!-- breadcrumbs -->
+    <div class="section / pt-4 / pb-0">
+      <nav class="breadcrumb / has-bullet-separator">
+        <!-- buttons -->
+        <ul class="container">
+          <li class="is-active"><a>Figma</a></li>
+          <li><a class="has-text-grey">Explore</a></li>
+          <li><a class="has-text-grey">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Product Info -->
+    <section class="section">
+      <div class="container">
+        <div class="columns / is-vcentered / is-multiline">
+          <!-- COLUMNS -->
+          <div class="column / is-6-tablet / is-size-3-desktop">
+            <!-- TITLE -->
+            <h1 class="is-size-2-mobile is-size-1-desktop title">Cologne</h1>
+            <h2 class="is-size-2-mobile is-size-3-desktop subtitle">
+              Dark Roast
+            </h2>
+            <!-- DESCRIPTION -->
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, iure
+              quidem? Officiis eos cumque laborum nihil a placeat eius
+              consectetur?
+            </p>
+          </div>
+          <div class="column / is-6-tablet / is-5-desktop / has-text-centered">
+            <!-- IMG -->
+            <img class="px-6" src="assets/Premium.avif" alt="fresh" />
+          </div>
+          <!-- TEXT DESCRIPTION -->
+          <div class="column / is-12-tablet / is-4-desktop">
+            <div class="is-size-4 mb-4">$10.95</div>
+            <p class="mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo,
+              quidem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br></br>
+
+    <!-- TABS  -->
+    <section class="section">
+      <div class="container">
+        <div class="columns / is-8 / is-variable">
+          <div class="column / is-7-tablet">
+            <!-- tabbed content -->
+            <!-- https://bulma.io/documentation/components/tabs/#styles -->
+            <div class="tabs / is-boxed">
+              <ul>
+                <!-- https://bulma.io/documentation/components/tabs/#combining -->
+                <!-- BUTTON -->
+                <li class="is-active" data-target="product-details">
+                  <a>Product Details</a>
+                </li>
+                <!-- BUTTON -->
+                <li data-target="delivery-information">
+                  <a>Delivery Information</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- script that makes tabs above work -->
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll(".tabs ul li");
+                const tabContents = document.querySelectorAll("#tab-content > div");
+
+                tabs.forEach(tab => {
+                  tab.addEventListener("click", () => {
+                    // Remove 'is-active' class from all tabs
+                    tabs.forEach(item => item.classList.remove("is-active"));
+                    // Add 'is-active' class to the clicked tab
+                    tab.classList.add("is-active");
+
+                    // Get the target content ID
+                    const target = tab.getAttribute("data-target");
+
+                    // Show the corresponding content and hide others
+                    tabContents.forEach(box => {
+                      box.classList.toggle("is-hidden", box.getAttribute("id") !== target);
+                    });
+                  });
+                });
+              });
+            </script>
+            
+            <!-- Description section of tabs -->
+            <div class="px-2" id="tab-content">
+              <div id="product-details">
+                <h3 class="is-size-5 title">Product Details</h3>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique illum minima impedit consectetur fuga nisi ducimus
+                  quis nihil, repellat pariatur perspiciatis explicabo hic amet
+                  quas enim quasi incidunt cupiditate libero voluptatem omnis
+                  ipsam sequi, rem officia eaque. Tempore, quas voluptate?
+                </p>
+              </div>
+
+              <div id="delivery-information" class="is-hidden">
+                <h3 class="is-size-5 title">Delivery Information</h3>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique illum minima impedit consectetur fuga nisi ducimus
+                  quis nihil, repellat pariatur perspiciatis explicabo hic amet
+                  quas enim quasi incidunt cupiditate libero voluptatem omnis
+                  ipsam sequi, rem officia eaque. Tempore, quas voluptate?
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column is-5-tablet">
+            <p class="has-text-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsam
+              molestias animi pariatur consequuntur voluptatibus at dolore
+              accusamus voluptatum reiciendis, est aut obcaecati ad itaque,
+              quibusdam totam quia nihil nisi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br></br>
+
+  </body>
+</html>
