@@ -1,0 +1,290 @@
+<!-- https://bulma.io/documentation/ -->
+
+
+<!-- https://bulma.io/documentation/components/modal/-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulma Basics</title>
+    <!-- CSS FILE BULMA NEEDS IN ORDER TO WORK CORRECTLY -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar / has-shadow / is-info">
+      <div class="navbar-brand">
+        <!-- LOGO -->
+        <a class="navbar-item">
+          <img
+            src="assets/LOGO.png"
+            alt="sit logo"
+            style="max-height: 70px"
+            class="py-2 px-2"
+          />
+        </a>
+        <!-- Burger icon (for mobile)-->
+        <a class="navbar-burger" id="burger" style="color: white">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <!-- navbar buttons -->
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+          <!-- navbar buttons -->
+          <a class="navbar-item / has-text-light">My Account</a>
+          <a class="navbar-item / has-text-light">Shopping Cart (0)</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar menu functionality -->
+    <script>
+      //Mobile menu
+      const burgerIcon = document.querySelector("#burger");
+      const navbarMenu = document.querySelector("#nav-links");
+
+      burgerIcon.addEventListener("click", () => {
+        navbarMenu.classList.toggle("is-active");
+      });
+    </script>
+
+    <!-- breadcrumbs -->
+    <div class="section / pt-4 / pb-0">
+      <nav class="breadcrumb / has-bullet-separator">
+        <!-- buttons -->
+        <ul class="container">
+          <li class="is-active"><a>Figma</a></li>
+          <li><a class="has-text-grey">Explore</a></li>
+          <li><a class="has-text-grey">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Product Info -->
+    <section class="section">
+      <div class="container">
+        <div class="columns / is-vcentered / is-multiline">
+          <!-- COLUMNS -->
+          <div class="column / is-6-tablet / is-size-3-desktop">
+            <!-- TITLE -->
+            <h1 class="is-size-2-mobile is-size-1-desktop title">Cologne</h1>
+            <h2 class="is-size-2-mobile is-size-3-desktop subtitle">
+              Dark Roast
+            </h2>
+            <!-- DESCRIPTION -->
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, iure
+              quidem? Officiis eos cumque laborum nihil a placeat eius
+              consectetur?
+            </p>
+          </div>
+          <div class="column / is-6-tablet / is-5-desktop / has-text-centered">
+            <!-- IMG -->
+            <img class="px-6" src="assets/Premium.avif" alt="fresh" />
+          </div>
+          <!-- TEXT DESCRIPTION -->
+          <div class="column / is-12-tablet / is-4-desktop">
+            <div class="is-size-4 mb-4">$10.95</div>
+            <p class="mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo,
+              quidem.
+            </p>
+            <!-- buy button -->
+            <button class="button / is-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br></br>
+
+    <!-- TABS  -->
+    <section class="section">
+      <div class="container">
+        <div class="columns / is-8 / is-variable">
+          <div class="column / is-7-tablet">
+            <!-- tabbed content -->
+            <div class="tabs / is-boxed">
+              <ul>
+                <!-- BUTTON -->
+                <li class="is-active" data-target="product-details">
+                  <a>Product Details</a>
+                </li>
+                <!-- BUTTON -->
+                <li data-target="delivery-information">
+                  <a>Delivery Information</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- script that makes tabs above work -->
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll(".tabs ul li");
+                const tabContents = document.querySelectorAll("#tab-content > div");
+
+                tabs.forEach(tab => {
+                  tab.addEventListener("click", () => {
+                    // Remove 'is-active' class from all tabs
+                    tabs.forEach(item => item.classList.remove("is-active"));
+                    // Add 'is-active' class to the clicked tab
+                    tab.classList.add("is-active");
+
+                    // Get the target content ID
+                    const target = tab.getAttribute("data-target");
+
+                    // Show the corresponding content and hide others
+                    tabContents.forEach(box => {
+                      box.classList.toggle("is-hidden", box.getAttribute("id") !== target);
+                    });
+                  });
+                });
+              });
+            </script>
+            
+            <!-- Description section of tabs -->
+            <div class="px-2" id="tab-content">
+              <div id="product-details">
+                <h3 class="is-size-5 title">Product Details</h3>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique illum minima impedit consectetur fuga nisi ducimus
+                  quis nihil, repellat pariatur perspiciatis explicabo hic amet
+                  quas enim quasi incidunt cupiditate libero voluptatem omnis
+                  ipsam sequi, rem officia eaque. Tempore, quas voluptate?
+                </p>
+              </div>
+
+              <div id="delivery-information" class="is-hidden">
+                <h3 class="is-size-5 title">Delivery Information</h3>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Similique illum minima impedit consectetur fuga nisi ducimus
+                  quis nihil, repellat pariatur perspiciatis explicabo hic amet
+                  quas enim quasi incidunt cupiditate libero voluptatem omnis
+                  ipsam sequi, rem officia eaque. Tempore, quas voluptate?
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column is-5-tablet">
+            <!-- MESSAGE BOX -->
+             <div class="message">
+              <div class="message-header">
+                <p> Earn Points with Cologne Club</p>
+              </div>
+              <div class="message-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi et nisi distinctio vero excepturi ut ducimus est aspernatur in, vitae ipsum voluptatum iste. Odio, hic.</p>
+                <!-- BUTTON -->
+                <div class="has-text-centered / mt-5">
+                 <button class="button" id="signup">Sign Up</button>
+               </div>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br></br>
+
+    <!-- cards -->
+    <section class="section is-hidden-mobile">
+      <div class="container">
+        <h3 class="title / has-text-centered is-size-4">Related Products</h3>
+        <div class="columns / mt-5 / is-8 / is-variable / is-centered">
+         <!-- Column 1 -->
+          <div class="column / is-4-tablet / is-3-desktop">
+            <!-- CARD 1-->
+            <div class="card">
+              <div class="card-image / has-text-centered / px-6">
+                <img src="assets/book.avif" alt="product">
+              </div>
+              <div class="card-content">
+                <p>$12.95</p>
+                <p class="title / is-size-5">Book</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+
+           <!-- Column 2 -->
+          <div class="column / is-4-tablet / is-3-desktop">
+             <!-- CARD 2-->
+              <div class="card">
+              <div class="card-image / has-text-centered / px-6">
+                <img src="assets/Cup.avif" alt="product">
+              </div>
+              <div class="card-content">
+                <p>$10.95</p>
+                <p class="title / is-size-5">Cup</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="column / is-4-tablet / is-3-desktop">
+            
+            <!-- CARD 3 -->
+              <div class="card">
+              <div class="card-image / has-text-centered / px-6">
+                <img src="assets/berries.avif" alt="product">
+              </div>
+              <div class="card-content">
+                <p>$12.95</p>
+                <p class="title / is-size-5">Berries</p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a class="has-text-grey">View</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br></br>
+
+    <!-- MODAL -->
+    <div class="modal / is-active">
+      <div class="modal-background">
+        <div class="modal-content / has-background-white / py-5 px-5">
+          <h3 class="title / mb-6 / has-text-dark">Join the Club</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //FUNCTIONALITY THAT MAKES MODAL ABOVE WORK
+      const signupButton = document.querySelector('#signup');
+      const modalBg = document.querySelector('.modal-background');
+      const modal = document.querySelector('.modal');
+
+      signupButton.addEventListener('click', ()=>{
+        modal.classList.add('is-active')
+      })
+
+      modalBg.addEventListener('click', ()=>{
+        console.log("???")
+        modal.classList.remove('is-active')
+      })
+    </script>
+  </body>
+</html>
