@@ -8,9 +8,10 @@ Live: https://bulma-basics.onrender.com/
 ![image](https://github.com/user-attachments/assets/a876f221-87b0-42ad-a5db-6aac4486cae1)
 <sup>Credit goes to the original/external sources used.</sup>
 
-<b>Extra Resources:<b/>
+<b>Extra Resources:
 - Documentation: https://bulma.io/
 - Project: https://www.youtube.com/watch?v=SCSAExGFK1E&list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a&index=1
+</b>
 <br></br>
 
 ![image](https://github.com/user-attachments/assets/0efbf6ae-db26-4726-a297-b789d0b5a260)
