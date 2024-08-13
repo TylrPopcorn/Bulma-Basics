@@ -13,5 +13,7 @@ Live: https://bulma-basics.onrender.com/
 - Project: https://www.youtube.com/watch?v=SCSAExGFK1E&list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a&index=1
 <br></br>
 
+![image](https://github.com/user-attachments/assets/0efbf6ae-db26-4726-a297-b789d0b5a260)
+
 # Related Projects
 -  [Projects List](https://github.com/TylrPopcorn/Projects-List) - *Explore other projects I have worked on*
