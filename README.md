@@ -17,4 +17,5 @@ Live: https://bulma-basics.onrender.com/
 ![image](https://github.com/user-attachments/assets/0efbf6ae-db26-4726-a297-b789d0b5a260)
 
 # Related Projects
+-  [What Even Is Bulma?](https://github.com/TylrPopcorn/What-Even-Is-Bulma) - *Bulma explained in a simple way*
 -  [Projects List](https://github.com/TylrPopcorn/Projects-List) - *Explore other projects I have worked on*
