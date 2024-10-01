@@ -19,4 +19,5 @@ Live: https://bulma-basics.onrender.com/
 # Related Projects
 -  [What Even Is Bulma?](https://github.com/TylrPopcorn/What-Even-Is-Bulma) - *Bulma explained in a simple way*
 -  [Bulma Blog](https://github.com/TylrPopcorn/Bulma-Blog) - *A simple blog created with Bulma CSS framework*
+-  [Svelte-Basics](https://github.com/TylrPopcorn/Svelte-Basics) - *The basics of Svelte.js and how to use*
 -  [Projects List](https://github.com/TylrPopcorn/Projects-List) - *Explore other projects I have worked on*
